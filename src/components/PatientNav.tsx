@@ -113,7 +113,7 @@ function SOSModal({ onClose }: { onClose: () => void }) {
         {/* Corpo */}
         <div className="px-5 py-5 space-y-3">
           <button
-            onPointerDown={() => call("192")}
+            onClick={() => call("192")}
             className="flex items-center justify-between w-full px-5 py-4 rounded-2xl"
             style={{ background: "#DC3545", boxShadow: "0 6px 18px rgba(220,53,69,.32)", touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
           >
@@ -143,7 +143,7 @@ function SOSModal({ onClose }: { onClose: () => void }) {
 
           {/* Enfermeiro */}
           <button
-            onPointerDown={() => call("99999-9999")}
+            onClick={() => call("99999-9999")}
             className="flex items-center justify-between w-full px-5 py-3.5 rounded-2xl"
             style={{ background: "#FEF2F2", border: "1.5px solid #FECACA", touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
           >
@@ -206,7 +206,7 @@ export function PatientNav({ children }: { children: ReactNode }) {
 
       {/* FAB único — inline style não inclui display para não vencer lg:hidden */}
       <button
-        onPointerDown={() => setSosOpen(true)}
+        onClick={() => setSosOpen(true)}
         aria-label="Emergência"
         className="flex items-center gap-2 fixed z-40 font-extrabold text-white"
         style={{
