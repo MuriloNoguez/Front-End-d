@@ -60,7 +60,7 @@ export function DoctorNav({ children }: { children: ReactNode }) {
             </svg>
           </div>
           <div>
-            <div className="text-white font-extrabold text-[15px] leading-none tracking-tight">Carreira Saúde</div>
+            <div className="text-white font-extrabold text-[15px] leading-none tracking-tight">Carteira Saúde</div>
             <div className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,.4)" }}>Médico</div>
           </div>
         </div>
@@ -129,7 +129,7 @@ export function DoctorNav({ children }: { children: ReactNode }) {
                 <path d="M12 5v14M5 12h14" />
               </svg>
             </div>
-            <span className="text-white font-extrabold text-[15px] tracking-tight">Carreira Saúde · Médico</span>
+            <span className="text-white font-extrabold text-[15px] tracking-tight">Carteira Saúde · Médico</span>
           </div>
           <div
             className="flex items-center justify-center text-white text-[12px] font-bold"

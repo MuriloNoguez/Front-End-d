@@ -215,7 +215,7 @@ export default function RelatorioPage() {
                 {copied ? <><Check className="w-4 h-4" /> Copiado!</> : <><Copy className="w-4 h-4" /> Copiar link</>}
               </button>
               <a
-                href={`https://wa.me/?text=Meu relatório clínico Carreira Saúde: ${encodeURIComponent(shareLink)}`}
+                href={`https://wa.me/?text=Meu relatório clínico Carteira Saúde: ${encodeURIComponent(shareLink)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-extrabold text-[14px] text-white no-underline transition-opacity hover:opacity-90"

@@ -107,7 +107,7 @@ export default function PerfilPage() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "carreira-saude-dados.json";
+    a.download = "carteira-saude-dados.json";
     a.click();
     URL.revokeObjectURL(url);
     setExportDone(true);
@@ -489,7 +489,7 @@ export default function PerfilPage() {
       )}
 
       <div className="text-center text-[11px] text-[#C0CDD7] font-medium pb-4">
-        Carreira Saúde · v0.1.0 · © 2026
+        Carteira Saúde · v0.1.0 · © 2026
       </div>
     </div>
   );

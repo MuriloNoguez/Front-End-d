@@ -1,6 +1,6 @@
 {
-  "name": "Carreira Saúde — Cuidado Longitudinal",
-  "short_name": "Carreira Saúde",
+  "name": "Carteira Saúde — Cuidado Longitudinal",
+  "short_name": "Carteira Saúde",
   "description": "Acompanhe sua saúde e interaja com o seu médico de forma simples.",
   "start_url": "/paciente",
   "display": "standalone",

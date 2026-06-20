@@ -18,7 +18,7 @@ export default function LandingPage() {
         </div>
         <div className="text-center">
           <h1 className="text-white font-extrabold text-[36px] sm:text-[44px] tracking-tight leading-none">
-            Carreira Saúde
+            Carteira Saúde
           </h1>
           <p className="mt-2 text-[16px] sm:text-[18px] font-medium" style={{ color: "rgba(255,255,255,.5)" }}>
             Acompanhamento longitudinal de saúde integrado.
