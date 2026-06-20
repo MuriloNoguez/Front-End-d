@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { Pill, FlaskConical, Syringe, FileText, Check, X } from "lucide-react";
+import { ShareModal } from "@/components/ShareModal";
 
 const docTypes = ["Receita médica", "Resultado de exame", "Cartão de vacina", "Outro"];
 
@@ -45,6 +46,7 @@ const mockExtracted: Record<string, [string, string][]> = {
 };
 
 export default function ScannerPage() {
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [selectedType, setSelectedType] = useState(0);
   const [preview, setPreview] = useState<string | null>(null);
   const [fileName, setFileName] = useState<string>("");
@@ -432,17 +434,18 @@ export default function ScannerPage() {
           </svg>
           Ver histórico
         </Link>
-        <Link
-          href="/paciente/relatorio"
-          className="flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-[13px] sm:text-[14px] text-white no-underline whitespace-nowrap transition-opacity hover:opacity-90"
+        <button
+          onClick={() => setIsShareModalOpen(true)}
+          className="flex items-center gap-2 px-5 py-3 rounded-xl font-extrabold text-[13px] sm:text-[14px] text-white border-none cursor-pointer whitespace-nowrap transition-opacity hover:opacity-90"
           style={{ background: "#0077B6", boxShadow: "0 4px 14px rgba(0,119,182,.3)" }}
         >
           Gerar relatório
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </Link>
+        </button>
       </div>
+      <ShareModal isOpen={isShareModalOpen} onClose={() => setIsShareModalOpen(false)} />
     </div>
   );
 }

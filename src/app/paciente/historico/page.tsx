@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Pill, FlaskConical, Syringe, FileText } from "lucide-react";
+import { ShareModal } from "@/components/ShareModal";
 
 const STORAGE_KEY = "nexo_docs";
 
@@ -124,6 +125,7 @@ const filters = ["Todos", "Medicação", "Sintomas", "Exames", "Vacinas", "Consu
 export default function HistoricoPage() {
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [allEvents, setAllEvents] = useState<TimelineEvent[]>(staticEvents);
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -178,9 +180,9 @@ export default function HistoricoPage() {
               Todos os registros em ordem cronológica.
             </p>
           </div>
-          <Link
-            href="/paciente/relatorio"
-            className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-xl font-extrabold text-[13px] text-white no-underline whitespace-nowrap shrink-0 transition-opacity hover:opacity-90"
+          <button
+            onClick={() => setIsShareModalOpen(true)}
+            className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-xl font-extrabold text-[13px] text-white border-none cursor-pointer whitespace-nowrap shrink-0 transition-opacity hover:opacity-90"
             style={{ background: "#0077B6" }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -188,7 +190,7 @@ export default function HistoricoPage() {
               <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
             </svg>
             Compartilhar
-          </Link>
+          </button>
         </div>
       </div>
 
@@ -293,9 +295,9 @@ export default function HistoricoPage() {
               Gere um relatório clínico completo para o seu médico.
             </div>
           </div>
-          <Link
-            href="/paciente/relatorio"
-            className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-extrabold text-[14px] text-white no-underline whitespace-nowrap transition-opacity hover:opacity-90"
+          <button
+            onClick={() => setIsShareModalOpen(true)}
+            className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-extrabold text-[14px] text-white border-none cursor-pointer whitespace-nowrap transition-opacity hover:opacity-90"
             style={{ background: "#0077B6", boxShadow: "0 4px 14px rgba(0,119,182,.28)" }}
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -303,9 +305,10 @@ export default function HistoricoPage() {
               <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
             </svg>
             Compartilhar com médico
-          </Link>
+          </button>
         </div>
       </div>
+      <ShareModal isOpen={isShareModalOpen} onClose={() => setIsShareModalOpen(false)} />
     </div>
   );
 }

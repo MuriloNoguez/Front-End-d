@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { HelpCircle, ChevronRight, X, Activity, Stethoscope, PhoneCall } from "lucide-react";
+import { ShareModal } from "@/components/ShareModal";
 
 function Card({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
   return (
@@ -18,6 +19,7 @@ function Card({ children, style }: { children: React.ReactNode; style?: React.CS
 export default function HubPage() {
   const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
   const [teleSessionState, setTeleSessionState] = useState<string | null>(null);
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
   const startSession = (role: string) => {
     setTeleSessionState(role);
@@ -150,9 +152,9 @@ export default function HubPage() {
           </svg>
           <span className="text-[14px] font-bold text-[#10212E]">Ver histórico</span>
         </Link>
-        <Link
-          href="/paciente/relatorio"
-          className="flex items-center gap-3 px-4 py-4 rounded-2xl no-underline transition-colors hover:bg-[#E7F2F9]"
+        <button
+          onClick={() => setIsShareModalOpen(true)}
+          className="flex items-center gap-3 px-4 py-4 rounded-2xl border-none outline-none text-left w-full cursor-pointer transition-colors hover:bg-[#E7F2F9]"
           style={{ background: "#fff", border: "1px solid #EEF2F6" }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0077B6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -160,8 +162,10 @@ export default function HubPage() {
             <path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4" />
           </svg>
           <span className="text-[14px] font-bold text-[#10212E]">Relatório médico</span>
-        </Link>
+        </button>
       </div>
+
+      <ShareModal isOpen={isShareModalOpen} onClose={() => setIsShareModalOpen(false)} />
 
       {/* Help Modal */}
       {isHelpModalOpen && (
