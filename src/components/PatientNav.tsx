@@ -85,6 +85,7 @@ function SOSModal({ onClose }: { onClose: () => void }) {
     <div
       className="fixed inset-0 flex items-end sm:items-center justify-center sm:p-6"
       style={{ zIndex: 9999, background: "rgba(10,37,64,.78)" }}
+      onClick={onClose}
     >
       <div
         className="w-full sm:max-w-sm rounded-t-3xl sm:rounded-3xl overflow-hidden"
@@ -93,9 +94,19 @@ function SOSModal({ onClose }: { onClose: () => void }) {
       >
         {/* Header */}
         <div
-          className="flex flex-col items-center justify-center px-6 pt-8 pb-6"
+          className="relative flex flex-col items-center justify-center px-6 pt-8 pb-6"
           style={{ background: "#DC3545" }}
         >
+          <button
+            onClick={onClose}
+            aria-label="Fechar"
+            className="absolute top-4 right-4 flex items-center justify-center"
+            style={{ width: 32, height: 32, borderRadius: "50%", background: "rgba(255,255,255,.18)", border: "1.5px solid rgba(255,255,255,.28)", color: "#fff" }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
           <div
             className="flex items-center justify-center mb-4"
             style={{ width: 60, height: 60, borderRadius: "50%", background: "rgba(255,255,255,.18)", border: "2px solid rgba(255,255,255,.28)" }}
@@ -141,9 +152,9 @@ function SOSModal({ onClose }: { onClose: () => void }) {
             </svg>
           </button>
 
-          {/* Enfermeiro */}
+          {/* Bombeiros */}
           <button
-            onClick={() => call("99999-9999")}
+            onClick={() => call("193")}
             className="flex items-center justify-between w-full px-5 py-3.5 rounded-2xl"
             style={{ background: "#FEF2F2", border: "1.5px solid #FECACA", touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
           >
@@ -157,12 +168,12 @@ function SOSModal({ onClose }: { onClose: () => void }) {
                 </svg>
               </div>
               <div>
-                <p className="text-[14px] font-extrabold text-[#C05B6A]">Enfermeiro </p>
+                <p className="text-[14px] font-extrabold text-[#C05B6A]">Bombeiros</p>
                 <p
                   className="text-[13px] font-bold text-[#9AAAB7]"
                   style={{ fontFamily: "var(--font-mono-clinical, ui-monospace, monospace)" }}
                 >
-                  99999-9999
+                  193
                 </p>
               </div>
             </div>
