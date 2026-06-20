@@ -92,7 +92,7 @@ export function ShareModal({ isOpen, onClose }: ShareModalProps) {
               {copied ? <><Check className="w-4.5 h-4.5" /> Copiado!</> : <><Copy className="w-4.5 h-4.5" /> Copiar link</>}
             </button>
             <a
-              href={`https://wa.me/?text=Olá Dr., aqui está o meu prontuário clínico atualizado do Nexo Saúde para consulta: ${encodeURIComponent(shareLink)}`}
+              href={`https://wa.me/?text=Olá Dr., aqui está o meu prontuário clínico atualizado do Carreira Saúde para consulta: ${encodeURIComponent(shareLink)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-extrabold text-[14px] text-white no-underline transition-opacity hover:opacity-90 shadow-xs"

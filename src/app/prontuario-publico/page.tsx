@@ -60,7 +60,7 @@ export default function PublicProntuarioPage() {
                 <path d="M12 5v14M5 12h14" />
               </svg>
             </div>
-            <span className="font-extrabold text-[15px] tracking-tight">Nexo Saúde</span>
+            <span className="font-extrabold text-[15px] tracking-tight">Carreira Saúde</span>
           </div>
           <div className="flex items-center gap-2 bg-[#E8F6EF]/10 px-3 py-1 rounded-full border border-[#2F9367]/25">
             <Shield className="w-3.5 h-3.5 text-[#2F9367]" />
@@ -251,7 +251,7 @@ export default function PublicProntuarioPage() {
 
       {/* Public Footer */}
       <footer className="mt-16 text-center text-[12px] text-[#7B8B99] max-w-sm mx-auto px-4 leading-5">
-        <p>Desenvolvido por Nexo Saúde. Este canal é restrito a fins informativos clínicos sob autorização expressa do paciente.</p>
+        <p>Desenvolvido por Carreira Saúde. Este canal é restrito a fins informativos clínicos sob autorização expressa do paciente.</p>
       </footer>
     </div>
   );

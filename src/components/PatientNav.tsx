@@ -252,7 +252,7 @@ export function PatientNav({ children }: { children: ReactNode }) {
             </svg>
           </div>
           <div>
-            <p className="text-white font-extrabold text-[15px] leading-none tracking-tight">Nexo Saúde</p>
+            <p className="text-white font-extrabold text-[15px] leading-none tracking-tight">Carreira Saúde</p>
             <p className="text-[11px] mt-0.5" style={{ color: "rgba(255,255,255,.4)" }}>Paciente</p>
           </div>
         </div>
@@ -305,7 +305,7 @@ export function PatientNav({ children }: { children: ReactNode }) {
                 <path d="M12 5v14M5 12h14" />
               </svg>
             </div>
-            <span className="text-white font-extrabold text-[15px] tracking-tight">Nexo Saúde</span>
+            <span className="text-white font-extrabold text-[15px] tracking-tight">Carreira Saúde</span>
           </div>
           <div className="flex items-center justify-center text-white text-[13px] font-bold" style={{ width: 30, height: 30, borderRadius: "50%", background: "rgba(0,119,182,.4)" }}>
             M

@@ -3,13 +3,13 @@ import "./globals.css";
 import { PWARegister } from "@/components/PWARegister";
 
 export const metadata: Metadata = {
-  title: "Nexo Saúde — Acompanhamento Longitudinal",
+  title: "Carreira Saúde — Acompanhamento Longitudinal",
   description: "Cuidado de saúde contínuo e integrado ao seu médico",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Nexo Saúde",
+    title: "Carreira Saúde",
   },
 };
 
